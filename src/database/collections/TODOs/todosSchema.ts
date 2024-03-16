@@ -15,6 +15,10 @@ const TODOsSchema = new Schema<TODOsDocument>({
     required: true,
     default: true
   },
+  userId: {
+    type: String,
+    required: true
+  }
 }, { timestamps: true });
 
 const TODOsModel = mongoose.model<TODOsDocument>('TODOs', TODOsSchema);
